@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: flight_booking
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    ports:
+      - "4006:4006"
+    environment:
+      DB_HOST: db
+      DB_USER: user
+      DB_PASS: pass
+      DB_NAME: flight_booking
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
