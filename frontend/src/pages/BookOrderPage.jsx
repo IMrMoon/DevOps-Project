@@ -5,7 +5,7 @@ import { StoreContext } from '../store/StoreContext';
 import '../App.css';
 import { Form, Button, Container, Stack } from 'react-bootstrap';
 import { jwtDecode } from 'jwt-decode';
-import AddProductForm from '../components/AddProductForm';
+import SearchOrderForm from '../components/SearchOrderForm';
 
 export default function EditProductPage(product) {
   const { id } = useParams();

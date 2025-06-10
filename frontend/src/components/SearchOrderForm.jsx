@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Form, Button, Container, Alert, Spinner } from 'react-bootstrap';
 import api from '../services/api';
-import { handleMainImageChange, handlePdfUpload } from '../utils/fileHandlers';
-import { uploadFiles } from '../utils/uploadFiles';
+// import { handleMainImageChange, handlePdfUpload } from '../utils/fileHandlers';
+// import { uploadFiles } from '../utils/uploadFiles';
 import { useNavigate, useParams } from 'react-router-dom';
 
-function AddProductForm({
+function SearchOrderForm({
   onProductAdded,
   handleClose,
   initialData = null,

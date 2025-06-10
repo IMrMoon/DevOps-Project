@@ -10,19 +10,12 @@ import {
   useNavigate,
 } from 'react-router-dom';
 import HomePage from './pages/HomePage.jsx';
-import SignInPage from './pages/SignInPage.jsx';
-import SignUpPage from './pages/SignUpPage.jsx';
-import ProductsPage from './pages/ProductsPage.jsx';
+import FlightsPage from './pages/ProductsPage.jsx';
 import { StoreProvider, StoreContext } from './store/StoreContext.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
 import ProductsAdminRoute from './components/ProductsAdminRoute';
 import './App.css'; // Import the new CSS
-import ReportsPage from './pages/ReportsPage.jsx';
-import ProductPage from './pages/ProductPage.jsx';
-import EditProductPage from './pages/UpdateProductPage.jsx';
-import LeadsPage from './pages/LeadsPage.jsx';
-import LeadsGeneration from './pages/LeadsGeneration.jsx';
-import LeadManager from './pages/LeadManager.jsx';
+
 
 function Navbar() {
   const { user, signOut, isLoading, isValidating } = useContext(StoreContext);
