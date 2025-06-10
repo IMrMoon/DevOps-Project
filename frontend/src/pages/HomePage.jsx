@@ -32,7 +32,7 @@ export default function HomePage() {
     cursor: 'pointer',
     transition: 'transform 0.3s ease',
   };
-
+  
   return (
     <div className="home-container">
       <h1>Hi {user?.firstName}! Welcome to SCE Software Ltd.</h1>
@@ -47,43 +47,8 @@ export default function HomePage() {
           flexWrap: 'wrap',
         }}
       >
-        {/* ── REPORTS TILE ── */}
-        <div style={tileStyle}>
-          <img
-            src="/reports.jpg"
-            alt="Reports"
-            onClick={() => navigate('/reports')}
-          />
-        </div>
 
-        <div style={tileStyle}>
-          <img src="/reports.jpg" alt="Products" />
-          <button
-            onClick={() => navigate('/products')}
-            style={btnStyle}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.transform = 'scale(1.05)')
-            }
-            onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-          >
-            Products
-          </button>
-        </div>
-
-        {/* ── MANAGE LEADS TILE ── */}
-        <div style={tileStyle}>
-          <img src="/lead_manager.png" alt="Lead Manager" />
-          <button
-            onClick={() => navigate('/lead-manager')}
-            style={btnStyle}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.transform = 'scale(1.05)')
-            }
-            onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-          >
-            Lead Manager
-          </button>
-        </div>
+        
       </div>
     </div>
   );

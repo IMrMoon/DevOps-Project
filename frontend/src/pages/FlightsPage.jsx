@@ -8,7 +8,7 @@ import { StoreContext } from '../store/StoreContext.jsx';
 import { useContext } from 'react';
 import AddProductForm from '../components/SearchOrderForm.jsx';
 
-// export default function ProductsPage() {
+export default function FlightsPage() {
 //   const [allProducts, setAllProducts] = useState([]);
 //   const [displayedProducts, setDisplayedProducts] = useState([]);
 //   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -17,7 +17,7 @@ import AddProductForm from '../components/SearchOrderForm.jsx';
 //   const [error, setError] = useState(null);
 //   const [showModal, setShowModal] = useState(false);
 //   const { user, token } = useContext(StoreContext);
-
+}
 //   useEffect(() => {
 //     fetchProducts();
 //   }, []);
