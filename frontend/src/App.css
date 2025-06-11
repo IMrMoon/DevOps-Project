@@ -12,7 +12,7 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   /* subtle fallback color */
-  background-color: #f3f5f7;
+  background-color: #ffffff;
 
   /* full-screen background image */
   background-image: url('/site-background.jpg');
@@ -23,8 +23,10 @@ body {
   /* keep the background fixed when scrolling */
   background-attachment: fixed;
 
-  color: #f1ebeb; /* default font color */
+  color: #ffffff; /* default font color */
 }
+
+
 
 /* =====================
    Navigation Bar
@@ -44,10 +46,10 @@ body {
   align-items: center;
 }
 
-.university-icon {
-  height: 70px;
+.flights-icon {
+  height: 60px;
   width: auto;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .nav-right {
@@ -100,7 +102,7 @@ body {
 .home-container h1 {
   margin-bottom: 1rem;
   font-size: 2.2rem;
-  color: #f3f5f7;
+  color: #000000;
 }
 
 .home-images {

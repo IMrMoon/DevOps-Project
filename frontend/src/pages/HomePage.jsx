@@ -2,7 +2,6 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { StoreContext } from '../store/StoreContext';
-
 export default function HomePage() {
   const navigate = useNavigate();
   const { user } = useContext(StoreContext);
@@ -32,24 +31,17 @@ export default function HomePage() {
     cursor: 'pointer',
     transition: 'transform 0.3s ease',
   };
-  
+
   return (
     <div className="home-container">
-      <h1>Hi {user?.firstName}! Welcome to SCE Software Ltd.</h1>
-      <p>Explore our products, check your receipts, or get support.</p>
-
-      <div
-        className="home-images"
-        style={{
-          display: 'flex',
-          gap: '30px',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-        }}
-      >
-
-        
+      <div className="site-tiles">
+      <h1>Flight Booking</h1>
       </div>
+      <div className="search-grid">
+
+      </div>
+
+      
     </div>
   );
 }
