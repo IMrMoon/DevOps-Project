@@ -1,4 +1,6 @@
 // src/data-access/flightsModel.js
+// להוסיף לכל טיסה שדה עבור מקומות פנויים במטוס
+
 import { DataTypes } from 'sequelize';
 import { sequelize } from './db.js';
 

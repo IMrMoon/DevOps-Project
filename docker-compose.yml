@@ -15,7 +15,7 @@ services:
   backend:
     build: ./backend
     ports:
-      - "4006:4006"
+      - "4000:4000"
     environment:
       DB_HOST: db
       DB_USER: user

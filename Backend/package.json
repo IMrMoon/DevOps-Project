@@ -1,7 +1,7 @@
 {
-  "name": "product-service",
+  "name": "flight-service",
   "version": "1.0.0",
-  "description": "products service",
+  "description": "flight-service",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EveHackmon/SCE-Playground.git"
+    "url": "https://github.com/IMrMoon/DevOps-Project.git"
   },
   "type": "module",
-  "author": "Products team",
+  "author": "flights team",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EveHackmon/SCE-Playground/issues"
+    "url": "https://github.com/IMrMoon/DevOps-Project/issues"
   },
-  "homepage": "https://github.com/EveHackmon/SCE-Playground#readme",
+  "homepage": "https://github.com/IMrMoon/DevOps-Project#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "chai-http": "^5.1.1",

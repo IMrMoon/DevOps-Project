@@ -1,4 +1,5 @@
 // src/data-access/ordersModel.js
+//להוסיף לכל הזמנה מספר כרטיסי טיסה עבור אותה הזמנה
 import { DataTypes } from 'sequelize';
 import { sequelize } from './db.js';
 
