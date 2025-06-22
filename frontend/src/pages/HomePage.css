@@ -1,4 +1,54 @@
-.site-title {
-  font-size: 2.2rem;
-  color: #000000;
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem;
+  background-color: #001f3f;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  direction: rtl;
+}
+
+.search-item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.search-item label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #333;
+  direction: ltr;
+}
+
+.search-item input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  direction: ltr;
+}
+
+.search-item button {
+  width: 90%;
+  padding: 0.1rem;
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 100%;
+  align-self: center;
+}
+
+.search-item button:hover {
+  background-color: #0056b3;
+}
+
+.full-height {
+  display: flex;
+  align-items: flex-end;
 }

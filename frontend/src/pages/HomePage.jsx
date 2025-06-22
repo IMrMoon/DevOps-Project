@@ -1,47 +1,75 @@
-// src/pages/HomePage.jsx
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
+import './HomePage.css';
 import { useNavigate } from 'react-router-dom';
-import { StoreContext } from '../store/StoreContext';
-export default function HomePage() {
-  const navigate = useNavigate();
-  const { user } = useContext(StoreContext);
 
-  const tileStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    width: '300px',
+export default function HomePage() {
+  const [form, setForm] = useState({
+    origin: '',
+    destination: '',
+    leave: '',
+    return: ''
+  });
+
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
-  const imgStyle = {
-    width: '100%',
-    borderRadius: '20px',
-    cursor: 'pointer',
-    boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-    transition: 'transform 0.3s ease',
-  };
-  const btnStyle = {
-    marginTop: '15px',
-    background: '#FF9992',
-    color: 'white',
-    padding: '10px 20px',
-    border: 'none',
-    borderRadius: '25px',
-    fontWeight: 'bold',
-    boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
-    cursor: 'pointer',
-    transition: 'transform 0.3s ease',
+
+  const handleSearch = () => {
+    const query = `from=${form.origin}&to=${form.destination}&depart=${form.leave}&ret=${form.return}`;
+    navigate(`/flights?${query}`);
   };
 
   return (
     <div className="home-container">
-      <div className="site-tiles">
       <h1>Flight Booking</h1>
-      </div>
+
       <div className="search-grid">
-
+        <div className="search-item">
+          <label>Origin</label>
+          <input
+            type="text"
+            name="origin"
+            placeholder="Enter Country"
+            value={form.origin}
+            onChange={handleChange}
+            dir="ltr"
+          />
+        </div>
+        <div className="search-item">
+          <label>Destination</label>
+          <input
+            type="text"
+            name="destination"
+            placeholder="Enter Country"
+            value={form.destination}
+            onChange={handleChange}
+            dir="ltr"
+          />
+        </div>
+        <div className="search-item">
+          <label>Leave Date</label>
+          <input
+            type="date"
+            name="leave"
+            value={form.leave}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="search-item">
+          <label>Return Date</label>
+          <input
+            type="date"
+            name="return"
+            value={form.return}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="search-item full-height">
+          <button onClick={handleSearch}>Search</button>
+        </div>
       </div>
-
-      
     </div>
   );
 }
